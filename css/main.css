@@ -7,6 +7,9 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+img{
+  display: block;
+}
 
 .container {
   max-width: 1170px;
@@ -33,9 +36,43 @@ body {
 }
 
 .card {
+  position: relative;
+  width: 270px;
   background-color: #fff;
 }
 
+.card__badges {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  right: 15px;
+}
+
+.card__badges > * + *{
+  margin-left: 10px;
+}
+
+.card__badge {
+  display: inline-block;
+  background: #525252;
+  border-radius: 4px;
+  height: 22px;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.card__badge--class{
+  color: #000000;
+  background-color: #FFCF26;
+}
+
+.card__badge--credit{
+  color: #fff;
+  background-color: #11BE75;
+}
 .card__img {
 }
 
@@ -56,16 +93,30 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: #000000;
+  margin-bottom: 10px;
 }
 
 .card__metro {
   font-size: 14px;
   line-height: 16px;
   color: #000000;
+  margin-bottom: 10px;
+}
+
+.card__metro::before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 16px;
+  height: 11px;
+  background-image: url("./../img/Vector.svg");
+  background-repeat: no-repeat;
+  background-size: initial;
 }
 
 .card__address {
   font-size: 14px;
   line-height: 16px;
-  color: #777777
+  color: #777777;
 }
