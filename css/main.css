@@ -29,8 +29,6 @@ img {
 
 .side-bar {
   width: 270px;
-  height: 100px;
-  background-color: aqua;
 }
 
 .cards-holder {
@@ -154,13 +152,42 @@ a.card-link:hover {
   transition: background-color 0.2s ease-in;
 }
 
-.show-more:hover{
+.show-more:hover {
   background-color: #e5e5e5;
-  
-
 }
-.show-more img{
+.show-more img {
   display: inline-block;
   margin-right: 10px;
   vertical-align: bottom;
+}
+
+/* Side bar*/
+.widget {
+}
+
+.widget__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.16;
+  color: #000000;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.widget__title::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('./../img/chevron-up.svg');
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center;
+  position: absolute;
+  
+  right: 0;
+  top: 0;
+}
+
+.widget__body {
+
 }
