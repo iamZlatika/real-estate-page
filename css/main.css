@@ -161,6 +161,9 @@ a.card-link:hover {
 
 /* Side bar*/
 
+.widget + .widget {
+  margin-top: 30px;
+}
 
 .widget__title {
   font-weight: bold;
@@ -217,7 +220,6 @@ a.card-link:hover {
   transition: background-color 0.2s ease-in;
 }
 
-
 .location__checkbox:checked + .location__btn {
   background-color: #ffcf26;
 }
@@ -233,3 +235,61 @@ a.card-link:hover {
   opacity: 0;
 }
 
+/* radio widget*/
+
+.radio {
+  cursor: pointer;
+  display: block;
+}
+
+.radio + .radio {
+  margin-top: 15px;
+}
+
+.radio__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  appearance: none;
+  opacity: 0;
+}
+
+.radio__fake {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+
+  border: 1px solid #777777;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
+.radio__real:checked + .radio__fake::before {
+  background: #3c3c3c;
+  width: 8px;
+  height: 8px;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio__real:checked + .radio__fake {
+  background-color: #ffe074;
+}
+
+.radio__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #3c3c3c;
+}
+.radio__real:checked ~ .radio__title {
+  font-weight: 500;
+  color: #000000;
+}
