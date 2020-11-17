@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-img{
+img {
   display: block;
 }
 
@@ -35,6 +35,25 @@ img{
   background-color: aqua;
 }
 
+.cards-holder{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+
+  .cards-holder > .card-link{
+   margin-bottom: 30px;  
+  }
+a.card-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+a.card-link:hover {
+  opacity: 0.9;
+  transform: translateY(-5px)
+}
+
 .card {
   position: relative;
   width: 270px;
@@ -49,7 +68,7 @@ img{
   right: 15px;
 }
 
-.card__badges > * + *{
+.card__badges > * + * {
   margin-left: 10px;
 }
 
@@ -64,14 +83,14 @@ img{
   color: #000000;
 }
 
-.card__badge--class{
+.card__badge--class {
   color: #000000;
-  background-color: #FFCF26;
+  background-color: #ffcf26;
 }
 
-.card__badge--credit{
+.card__badge--credit {
   color: #fff;
-  background-color: #11BE75;
+  background-color: #11be75;
 }
 .card__img {
 }
