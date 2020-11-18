@@ -350,8 +350,8 @@ a.card-link:hover {
   appearance: none;
   opacity: 0;
 }
-.widget__hidden{
-display: none;
+.widget__hidden {
+  display: none;
 }
 
 .widget__show-hidden {
@@ -368,7 +368,55 @@ display: none;
   padding: 0;
 }
 
-.widget__show-hidden:hover{
+.widget__show-hidden:hover {
   opacity: 0.8;
 }
 
+.toggle__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #3c3c3c;
+}
+
+.toggle__real:checked ~ .toggle__title {
+  font-weight: 500;
+}
+
+.toggle__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  appearance: none;
+  opacity: 0;
+}
+
+.toggle__fake {
+  position: relative;
+  display: inline-block;
+  width: 37px;
+  height: 20px;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+.toggle__fake::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #3c3c3c;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.2s ease-in;
+}
+
+.toggle__real:checked +.toggle__fake::before{
+    left: 19px;
+}
+.toggle__real:checked +.toggle__fake{
+  background-color: #FFE074;
+}
