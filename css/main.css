@@ -46,7 +46,21 @@ img {
 
 @media(max-width: 829px){
   .side-bar {
-   display: none;
+    margin-left: 0 !important;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   background-color: azure;
+   padding: 15px;
+   box-shadow: 0px 0px 20px 4px rgb(0 0 0 /37%);
+overflow-y: scroll;
+transform: translateX(-150%);
+transition: transform 0.2s ease-in;
+   }
+
+   .sidebar--mobile-active{
+    transform: translateX(0);
    }
 }
 .main-content + .side-bar{
@@ -485,4 +499,17 @@ a.card-link:hover {
 }
 .form-btn--submit:hover {
   background-color: #ffe173;
+}
+
+
+.toggle-sidebar{
+  position: fixed;
+  z-index: 9;
+  right: 15px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: burlywood;
+  border: none;
+
 }
