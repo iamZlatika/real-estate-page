@@ -503,6 +503,7 @@ a.card-link:hover {
 
 
 .toggle-sidebar{
+  display: none;
   position: fixed;
   z-index: 9;
   right: 15px;
@@ -511,5 +512,10 @@ a.card-link:hover {
   height: 30px;
   background-color: burlywood;
   border: none;
+}
 
+@media(max-width: 829px){
+  .toggle-sidebar{
+display: flex;
+  }
 }
